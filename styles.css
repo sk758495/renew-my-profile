@@ -1,0 +1,557 @@
+body {
+    /* background-image: url('img/bg-4.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Transparent Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.4) !important; /* Semi-transparent black */
+    transition: background 0.3s ease-in-out;
+}
+
+/* When scrolling, add a solid background */
+.navbar.scrolled {
+    background: #ffffffcc !important;
+}
+
+/* Style for the navbar items */
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #333;
+    display: inline-block;
+    overflow: hidden; /* Hide the text that's outside the container */
+    position: relative;
+    height: 30px; /* Adjust the height for the box */
+}
+
+/* Create a container for the scrolling text */
+.navbar-nav .nav-item .nav-link span {
+    display: block;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    white-space: nowrap; /* Keep the text on one line */
+}
+
+/* Apply the scrolling effect on hover of individual menu item */
+.navbar-nav .nav-item:hover .nav-link span {
+    animation: scroll-up 1s linear; /* Scroll animation on hover */
+}
+
+/* Define the scroll-up effect */
+@keyframes scroll-up {
+    0% {
+        transform: translateY(100%); /* Start with text hidden below the box */
+    }
+    50% {
+        transform: translateY(0); /* Scroll the text up to the center */
+    }
+    50% {
+        transform: translateY(-50%); /* Scroll the text up, hiding the original one */
+    }
+}
+
+/* Optional: Add a smooth transition effect when hovering */
+.navbar-nav .nav-item:hover .nav-link span {
+    animation: scroll-up 1s ease-in-out;
+}
+
+
+
+/* Style for search box */
+.input-group-text {
+    background: transparent;
+    border-right: none;
+}
+
+.form-control {
+    border-left: none;
+}
+
+[data-aos] {
+    opacity: 0; /* Make elements invisible before animation */
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Hero Image */
+.hero-image img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Sends image to background */
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+    color: rgb(88, 170, 53);
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 2.0rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Hero Description */
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Business Section */
+/* .business-section {
+    padding: 50px 0;
+    background-image: url('img/bg-5.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff; 
+} */
+
+
+
+/* Image Styling with Curve Effect */
+.image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Business Content Styling */
+.business-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a3326;
+}
+
+.business-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* List Items */
+.business-list {
+    list-style: none;
+    padding: 0;
+}
+
+.business-list li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.business-list i {
+    color: green;
+    margin-right: 10px;
+}
+
+/* Button Styling */
+.btn-dark {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.btn-dark:hover {
+    background-color: #444;
+}
+
+
+.contact-section {
+    padding: 50px 0;
+}
+.contact-info {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+}
+.contact-info h5 {
+    margin-bottom: 10px;
+}
+.contact-info p {
+    margin-bottom: 20px;
+}
+.contact-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.btn-custom {
+    background-color: #20c997;
+    color: #fff;
+    border: none;
+}
+.btn-custom:hover {
+    background-color: #17a589;
+}
+
+.skills-section {
+    padding: 50px 0;
+}
+
+/* Styling the progress bars */
+.progress-bar {
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* Styling the active tab button */
+.nav-tabs .nav-link.active {
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+}
+
+
+/* Styling the tab buttons */
+.nav-tabs .nav-link {
+    border: 1px solid #6f42c1;
+    color: #6f42c1;
+    width: 250px;
+    display: flex;
+}
+
+/* Center the text inside each column */
+.col-md-4 {
+    text-align: center;
+}
+
+/* Make the container and rows responsive */
+.container {
+    max-width: 1200px;
+}
+
+/* For better spacing */
+.mb-4 {
+    margin-bottom: 30px;
+}
+
+/* Ensure everything is responsive */
+@media (max-width: 767px) {
+    .col-md-4 {
+        /* Stacks the sections on smaller screens */
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+}
+
+
+.services-section {
+    padding: 50px 0;
+}
+.service-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.service-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9c74f;
+}
+.btn-hire {
+    background: #6f42c1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    float: right;
+}
+
+/* faq's */
+
+.faq-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+.faq-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a3b35;
+}
+.faq-subtitle {
+    font-size: 16px;
+    color: #bfa58a;
+    margin-bottom: 10px;
+}
+.underline {
+    width: 50px;
+    height: 2px;
+    background-color: #ff0000;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.accordion-button {
+    font-weight: bold;
+    color: #4a3b35;
+    background-color: transparent;
+}
+.accordion-button:not(.collapsed) {
+    color: #e44f26;
+}
+
+
+/* book */
+
+.book-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.book {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    perspective: 1500px;
+    cursor: pointer;
+}
+
+.cover, .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transform-origin: left;
+    transition: transform 1.3s ease-in-out;
+}
+
+.cover {
+    background: url('https://images.prismic.io/turing/652ec07efbd9a45bcec818e8_shutterstock_1064355815_722739a3b7.webp?auto=format,compress') center/cover;
+    transform: rotateY(0deg);
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.content {
+    background: url('https://shophelloworld.com/cdn/shop/files/PACKINGSLIP_Logo_DoNotDelete.png?v=1619458641&width=576') center/cover;
+    transform: rotateY(-180deg);
+    z-index: 2;
+}
+
+.book.open .cover {
+    transform: rotateY(-180deg);
+}
+
+.book.open .content {
+    transform: rotateY(0deg);
+}
+
+.skills-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    border-left: 3px solid #b34a7a;
+    border-right: 3px solid #b34a7a;
+}
+
+.skill-divider {
+    margin-bottom: -15px;
+    border: 1px solid #b34a7a; /* Same color as border */
+}
+
+
+#skill-slider{
+    background-color: #f5f5f5 ;
+}
+.skills-track {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+.skill-box {
+    width: 200px;
+    height: 150px;
+    background-color: #c25e91;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    rotate: 10deg;
+}
+.scroll-row {
+    display: flex;
+    gap: 20px;
+    animation: slide 10s linear infinite;
+}
+.reverse-scroll {
+    animation-direction: reverse;
+}
+@keyframes slide {
+    from { transform: translateX(80%); }
+    to { transform: translateX(-100%); }
+}
+.skills-wrapper:hover .scroll-row {
+    animation-play-state: paused;
+}
+
+.footer {
+    background-color: #111;
+    padding: 50px 80px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin: 8px 0;
+}
+.footer-column ul li a {
+    text-decoration: none;
+    color: #d6cfcf;
+    opacity: 0.8;
+}
+.footer-column ul li a:hover {
+    opacity: 1;
+}
+.contact-info-footer {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #d6cfcf;
+}
+.contact-info-footer a {
+    color: #ff6600;
+    text-decoration: none;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.social-icons a {
+    background-color: #d6cfcf;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.subscribe {
+    max-width: 300px;
+}
+.subscribe h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+.subscribe input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.subscribe button {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+.subscribe button:hover {
+    background-color: #cc5200;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+    border-top: 1px solid #222;
+    color: #d6cfcf;
+}
+.footer-bottom span {
+    color: #ff6600;
+}
+
+.footer-column{
+    color: white;
+}
