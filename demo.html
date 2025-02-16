@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        #hero-section {
+            color: rgb(15, 1, 1);
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .hero-text-container {
+            padding: 30px;
+            max-width: 600px;
+        }
+
+        .hero-image-container {
+            flex: 1;
+            margin-left: 30px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+        }
+        
+        .hero-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .typed-text {
+            color: #007bff;
+        }
+        .buttons a {
+            margin-right: 10px;
+            box-shadow: 0 0 10px black;
+        }
+        .social-links a {
+            color: #007bff;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        .hi-there {
+            display: inline-block;
+            background: white;
+            color: #007bff;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            position: relative;
+            box-shadow: 0 0 10px black;
+        }
+        .hi-there::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" id="hero-section">
+    <div class="container d-flex align-items-center">
+        <div class="hero-container">
+            <div class="hero-text-container">
+                <div class="hi-there">Hi There!</div>
+                <h1 class="hero-text">I am Sunny Kumar</h1>
+                <h2 class="hero-text">I <span class="typed-text"></span></h2>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                
+                <div class="buttons mt-3">
+                    <a href="#" class="btn btn-primary">Hire Me →</a>
+                    <a href="#" class="btn btn-light">View Portfolio →</a>
+                </div>
+                
+                <div class="social-links mt-4">
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="img/ACP-Head-Banner1.jpg" alt="Image" class="hero-image">
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        var options = {
+            strings: ["Love to Develop.", "Create Awesome Websites.", "Build Cool Applications."],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true
+        };
+        var typed = new Typed(".typed-text", options);
+    </script>
+</body>
+</html>

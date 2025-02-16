@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
 </head>
@@ -48,17 +49,41 @@
   </div>
 
     <!-- Hero Section -->
-    <section class="hero-section" data-aos="fade-up">
-        <div class="hero-image">
-            <img src="img/bg-5.jpg" alt="Hero Background">
+    <div class="container-fluid" id="hero-section">
+        <div class="container d-flex align-items-center">
+            <div class="hero-container">
+                <div class="hero-text-container">
+                    <div class="hi-there">Hi There!</div>
+                    <h1 class="hero-text">I am Sunny Kumar</h1>
+                    <h2 class="hero-text">I <span class="typed-text"></span></h2>
+                    <p>I build dynamic and efficient web solutions, seamlessly blending front-end creativity with back-end functionality to create exceptional digital experiences.</p>
+                    
+                    <div class="buttons mt-3">
+                        <a href="#" class="btn btn-primary">Hire Me →</a>
+                        <a href="#" class="btn btn-light">View Portfolio →</a>
+                    </div>
+                    
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <img src="img/ACP-Head-Banner1.jpg" alt="Image" class="hero-image">
+                </div>
+            </div>
         </div>
-        <div class="hero-content text-center">
-            <h1 class="hero-title"></h1>
-            <p class="hero-description">
-            </p>
-            <a href="#contact" class="btn btn-primary">Get Started</a>
-        </div>
-    </section>
+    </div>
+        <script>
+            var options = {
+                strings: ["Love to Develop.", "Create Awesome Websites.", "Build Cool Applications."],
+                typeSpeed: 50,
+                backSpeed: 25,
+                loop: true
+            };
+            var typed = new Typed(".typed-text", options);
+        </script>
 
     <section class="business-section" data-aos="fade-up">
         <div class="container">
