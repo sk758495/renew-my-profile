@@ -340,7 +340,7 @@
         <div class="container my-project">
             <h1>My Projects</h1>
             <div class="filter-menu">
-                <button class="btn btn-primary filter-btn" data-filter="all">All</button>
+                <button class="btn btn-primary filter-btn active" data-filter="all">All</button>
                 <button class="btn btn-outline-primary filter-btn" data-filter="static">Static Websites</button>
                 <button class="btn btn-outline-primary filter-btn" data-filter="dynamic">Dynamic Websites</button>
                 <button class="btn btn-outline-primary filter-btn" data-filter="portfolio">Portfolio Websites</button>
@@ -370,17 +370,56 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4 project-item static">
+                    <div class="card">
+                        <img src="img/banner-2.jpg" alt="Static Website">
+                        <div class="card-body">
+                            <h5 class="card-title">Static Website 1</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 project-item dynamic">
+                    <div class="card">
+                        <img src="img/banner-3.jpg" alt="Dynamic Website">
+                        <div class="card-body">
+                            <h5 class="card-title">Dynamic Website 1</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 project-item portfolio">
+                    <div class="card">
+                        <img src="img/banner-4.png" alt="Portfolio Website">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Website 1</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- JavaScript with Animations -->
         <script>
             document.querySelectorAll('.filter-btn').forEach(button => {
                 button.addEventListener('click', function() {
                     let filter = this.getAttribute('data-filter');
+                    
+                    // Remove 'active' class from all buttons and add to the clicked one
+                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
                     document.querySelectorAll('.project-item').forEach(item => {
                         if (filter === 'all' || item.classList.contains(filter)) {
-                            item.classList.remove('hidden');
+                            item.style.opacity = "0";
+                            item.style.display = "block";
+                            setTimeout(() => {
+                                item.style.opacity = "1";
+                                item.style.transform = "translateY(0px)";
+                            }, 100);
                         } else {
-                            item.classList.add('hidden');
+                            item.style.opacity = "0";
+                            setTimeout(() => {
+                                item.style.display = "none";
+                            }, 300);
                         }
                     });
                 });
