@@ -472,21 +472,19 @@ body {
     transform: rotateY(0deg);
 }
 
-
-
 .skills-wrapper {
     overflow: hidden;
     white-space: nowrap;
     position: relative;
     width: 100%;
     padding: 20px 0;
-    border-left: 3px solid #3d8ecc;
-    border-right: 3px solid #3d8ecc;
+    border-left: 3px solid #b34a7a;
+    border-right: 3px solid #b34a7a;
 }
 
 .skill-divider {
     margin-bottom: -15px;
-    border: 1px solid #3d8ecc; /* Same color as border */
+    border: 1px solid #b34a7a; /* Same color as border */
 }
 
 #skill-slider {
@@ -545,7 +543,6 @@ body {
 .skills-wrapper:hover .scroll-row {
     animation-play-state: paused;
 }
-
 
 .footer {
     background-color: #111;
