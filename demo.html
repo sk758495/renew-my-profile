@@ -3,117 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Section</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <title>Project Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        #hero-section {
-            color: rgb(15, 1, 1);
-            font-family: Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .my-project {
             text-align: left;
+            padding: 50px 0;
         }
-
-        .hero-text-container {
+        .card {
+            background: #fff;
+            border-radius: 10px;
             padding: 30px;
-            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
         }
-
-        .hero-image-container {
-            flex: 1;
-            margin-left: 30px;
-        }
-
-        .hero-image {
+        .card img {
             width: 100%;
             height: auto;
+            border-radius: 8px;
+            transform: rotate(10deg);
+            transition: transform 0.3s ease-in-out;
         }
-        
-        .hero-text {
-            font-size: 2.5rem;
-            font-weight: bold;
+        .card:hover img {
+            transform: rotate(0deg);
         }
-        .typed-text {
-            color: #007bff;
+        .card h3 {
+            margin-top: 10px;
+            font-size: 18px;
         }
-        .buttons a {
-            margin-right: 10px;
-            box-shadow: 0 0 10px black;
-        }
-        .social-links a {
-            color: #007bff;
-            margin-right: 15px;
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
-        .hi-there {
-            display: inline-block;
-            background: white;
-            color: #007bff;
-            font-weight: bold;
-            padding: 8px 15px;
-            border-radius: 20px;
+        .card p {
+            color: gray;
             font-size: 14px;
-            position: relative;
-            box-shadow: 0 0 10px black;
-        }
-        .hi-there::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 15px solid white;
         }
     </style>
 </head>
 <body>
-    <div class="container-fluid" id="hero-section">
-    <div class="container d-flex align-items-center">
-        <div class="hero-container">
-            <div class="hero-text-container">
-                <div class="hi-there">Hi There!</div>
-                <h1 class="hero-text">I am Sunny Kumar</h1>
-                <h2 class="hero-text">I <span class="typed-text"></span></h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                
-                <div class="buttons mt-3">
-                    <a href="#" class="btn btn-primary">Hire Me →</a>
-                    <a href="#" class="btn btn-light">View Portfolio →</a>
-                </div>
-                
-                <div class="social-links mt-4">
-                    <a href="#">+ <i class="fab fa-facebook"></i> Facebook</a>
-                    <a href="#">+ <i class="fab fa-twitter"></i> Twitter</a>
-                    <a href="#">+ <i class="fab fa-linkedin"></i> LinkedIn</a>
+    <div class="container my-project">
+        <h1>My Project</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-12 mb-3">
+                <div class="card">
+                    <img src="img/about-image.jpg" alt="Zoik Agency">
+                    <h3>Zoik agency</h3>
+                    <p>Branding</p>
                 </div>
             </div>
-            <div class="hero-image-container">
-                <img src="img/ACP-Head-Banner1.jpg" alt="Image" class="hero-image">
+            <div class="col-md-4 col-sm-12 mb-3">
+                <div class="card">
+                    <img src="img/about-image.jpg" alt="The Watch">
+                    <h3>The Watch</h3>
+                    <p>Photography</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mb-3">
+                <div class="card">
+                    <img src="img/about-image.jpg" alt="Polo">
+                    <h3>Polo</h3>
+                    <p>Website</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-    <script>
-        var options = {
-            strings: ["Love to Develop.", "Create Awesome Websites.", "Build Cool Applications."],
-            typeSpeed: 50,
-            backSpeed: 25,
-            loop: true
-        };
-        var typed = new Typed(".typed-text", options);
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
