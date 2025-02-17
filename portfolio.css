@@ -1,45 +1,32 @@
 .my-project {
-    text-align: left;
+    text-align: center;
     padding: 50px 0;
+}
+.filter-menu {
+    margin-bottom: 20px;
 }
 .card {
     background: #fff;
     border-radius: 10px;
-    padding: 30px;
+    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
     transition: transform 0.3s ease-in-out;
-    height: 100%; /* Ensure uniform card height */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 .card img {
     width: 100%;
-    height: 300px; /* Fixed height for images */
-    object-fit: cover; /* Ensure images fit without distortion */    
-    transform: rotate(10deg);
+    height: 250px;
+    object-fit: cover;
+    transform: rotate(10deg); /* Default tilted image */
     transition: transform 0.3s ease-in-out;
 }
 .card:hover img {
-    transform: rotate(0deg);
-    border-radius: 8px;
+    transform: rotate(0deg); /* Reset image when hovered */
 }
-.card h3 {
-    margin-top: 10px;
-    font-size: 18px;
+.card-body {
+    padding: 15px;
+    text-align: left;
 }
-.card p {
-    color: gray;
-    font-size: 14px;
+.hidden {
+    display: none;
 }
 
-@media (max-width: 768px) {
-.card-container {
-    flex-direction: column; /* Stack cards vertically */
-    align-items: center; /* Center align cards */
-}
-.card {
-    width: 90%; /* Adjust width to be more flexible */
-}
-}

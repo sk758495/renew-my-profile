@@ -3,68 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Cards</title>
+    <title>Filtered Project Section</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .my-project {
-            text-align: left;
+            text-align: center;
             padding: 50px 0;
+        }
+        .filter-menu {
+            margin-bottom: 20px;
         }
         .card {
             background: #fff;
             border-radius: 10px;
-            padding: 30px;
+            overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
             transition: transform 0.3s ease-in-out;
         }
         .card img {
             width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transform: rotate(10deg);
+            height: 250px;
+            object-fit: cover;
             transition: transform 0.3s ease-in-out;
         }
         .card:hover img {
-            transform: rotate(0deg);
+            transform: scale(1.05);
         }
-        .card h3 {
-            margin-top: 10px;
-            font-size: 18px;
+        .card-body {
+            padding: 15px;
+            text-align: left;
         }
-        .card p {
-            color: gray;
-            font-size: 14px;
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 <body>
     <div class="container my-project">
-        <h1>My Project</h1>
-        <div class="row justify-content-center">
-            <div class="col-md-4 col-sm-12 mb-3">
+        <h1>My Projects</h1>
+        <div class="filter-menu">
+            <button class="btn btn-primary filter-btn" data-filter="all">All</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="static">Static Websites</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="dynamic">Dynamic Websites</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="portfolio">Portfolio Websites</button>
+        </div>
+        <div class="row" id="projectContainer">
+            <div class="col-md-4 project-item static">
                 <div class="card">
-                    <img src="img/about-image.jpg" alt="Zoik Agency">
-                    <h3>Zoik agency</h3>
-                    <p>Branding</p>
+                    <img src="img/static1.jpg" alt="Static Website">
+                    <div class="card-body">
+                        <h5 class="card-title">Static Website 1</h5>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12 mb-3">
+            <div class="col-md-4 project-item dynamic">
                 <div class="card">
-                    <img src="img/about-image.jpg" alt="The Watch">
-                    <h3>The Watch</h3>
-                    <p>Photography</p>
+                    <img src="img/dynamic1.jpg" alt="Dynamic Website">
+                    <div class="card-body">
+                        <h5 class="card-title">Dynamic Website 1</h5>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12 mb-3">
+            <div class="col-md-4 project-item portfolio">
                 <div class="card">
-                    <img src="img/about-image.jpg" alt="Polo">
-                    <h3>Polo</h3>
-                    <p>Website</p>
+                    <img src="img/portfolio1.jpg" alt="Portfolio Website">
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio Website 1</h5>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".filter-btn");
+            const cards = document.querySelectorAll(".project-card");
+            
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    let filter = this.getAttribute("data-filter");
+                    
+                    buttons.forEach(btn => btn.classList.remove("active"));
+                    this.classList.add("active");
+                    
+                    cards.forEach(card => {
+                        if (filter === "all" || card.getAttribute("data-category") === filter) {
+                            card.style.display = "block";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
