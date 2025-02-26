@@ -14,7 +14,7 @@ $dompdf = new Dompdf($options);
 
 // Load HTML content
 ob_start();
-include 'index.html';
+include 'resume.html';
 $html = ob_get_clean();
 
 $dompdf->loadHtml($html);
