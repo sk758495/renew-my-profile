@@ -1,34 +1,30 @@
 <?php
-require 'vendor/autoload.php';  // Include DOMPDF via Composer
+require 'vendor/autoload.php';
 
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
-// Create instance of Dompdf
-$dompdf = new Dompdf();
-
-// Load HTML content (make sure to pass the full path to the HTML file)
-$html = file_get_contents('resume.html');
-
-// Options for DOMPDF (for handling images and large files)
+// Enable remote file access
 $options = new Options();
+$options->set('defaultFont', 'Arial');
 $options->set('isHtml5ParserEnabled', true);
-$options->set('isPhpEnabled', false);  // Disable PHP
-$options->set('isJavascriptEnabled', false);  // Disable JavaScript
+$options->set('isRemoteEnabled', true); // ✅ This allows external images
 
-$dompdf->setOptions($options);
+$dompdf = new Dompdf($options);
 
 // Load HTML content
+ob_start();
+include 'index.html';
+$html = ob_get_clean();
+
 $dompdf->loadHtml($html);
 
-// Set paper size (A4 by default)
+// Set page size
 $dompdf->setPaper('A4', 'portrait');
 
-// Render PDF (first pass)
+// Render PDF
 $dompdf->render();
 
-// Output the generated PDF to browser or save it as a file
-$dompdf->stream("resume.pdf", array("Attachment" => 0)); // 0 for displaying in browser
-// or to save the PDF
-// $dompdf->stream("resume.pdf", array("Attachment" => 1)); // 1 for downloading
+// Output as download
+$dompdf->stream("Singapore_Tour_Package.pdf", ["Attachment" => true]);
 ?>
