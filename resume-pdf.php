@@ -26,5 +26,5 @@ $dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
 
 // Output as download
-$dompdf->stream("Singapore_Tour_Package.pdf", ["Attachment" => true]);
+$dompdf->stream("webdeveloper.pdf", ["Attachment" => true]);
 ?>
