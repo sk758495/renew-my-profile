@@ -13,16 +13,8 @@ $html = file_get_contents('resume.html');
 // Options for DOMPDF (for handling images and large files)
 $options = new Options();
 $options->set('isHtml5ParserEnabled', true);
-$options->set('isPhpEnabled', true);
-$options->set('isHtml5ParserEnabled', true);
-$options->set('isJavascriptEnabled', true);  // Enable JavaScript (optional, only if necessary)
-$options->set("isHtml5ParserEnabled", true);
-
-// Enable external image support (if using absolute URLs)
-$options->set('isPhpEnabled', true);
-$options->set('isHtml5ParserEnabled', true);
-$options->set("isHtml5ParserEnabled", true);
-$options->set("isJavascriptEnabled", true);
+$options->set('isPhpEnabled', false);  // Disable PHP
+$options->set('isJavascriptEnabled', false);  // Disable JavaScript
 
 $dompdf->setOptions($options);
 
