@@ -17,6 +17,8 @@
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap */
         }
 
         .left-panel {
@@ -24,6 +26,7 @@
             color: white;
             padding: 30px;
             border-radius: 10px 0 0 10px;
+            flex: 1;
         }
 
         .profile-pic {
@@ -36,6 +39,7 @@
 
         .right-panel {
             padding: 30px;
+            flex: 1;
         }
 
         .progress-bar {
@@ -69,7 +73,7 @@
 </head>
 
 <body>
-    <div class="resume" style="display: flex; margin-top: 20;">
+    <div class="resume" style="margin-top: 20px;">
         <!-- Left Panel -->
         <div class="left-panel text-center">
             <img src="https://techno.web4design.in/img/logo/Techno.png" alt="Profile" class="profile-pic">
