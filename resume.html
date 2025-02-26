@@ -18,7 +18,8 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             display: flex;
-            flex-wrap: wrap; /* Allow items to wrap */
+            /* Flexbox for two columns */
+            justify-content: space-between;
         }
 
         .left-panel {
@@ -26,7 +27,12 @@
             color: white;
             padding: 30px;
             border-radius: 10px 0 0 10px;
-            flex: 1;
+            flex: 0 0 45%; /* 45% width for the left panel */
+        }
+
+        .right-panel {
+            padding: 30px;
+            flex: 0 0 50%; /* 50% width for the right panel */
         }
 
         .profile-pic {
@@ -35,11 +41,6 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
-        }
-
-        .right-panel {
-            padding: 30px;
-            flex: 1;
         }
 
         .progress-bar {
