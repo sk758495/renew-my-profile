@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Admin Details (Your Email)
     $admin_email = "sk758495@gmail.com"; 
     $admin_name  = "Your Name"; // Change to your name
-    $logo_url = "https://yourwebsite.com/logo.png"; // Your logo (optional)
+    $logo_url = "https://techno.web4design.in/img/logo/Techno.png"; // Your logo (optional)
 
     // SMTP Configuration
     $smtp_host = "smtp.gmail.com"; // Change if using Outlook/Yahoo
@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h2 style='color: #333;'>Welcome to Our Community!</h2>
                 <p>Thank you for subscribing to our updates. Stay tuned for the latest news and offers!</p>
                 <p>If you have any questions, feel free to <a href='mailto:$admin_email'>contact us</a>.</p>
-                <p style='color: #777; font-size: 12px;'>Best Regards,<br><strong>Your Support Team</strong></p>
+                <p style='color: #777; font-size: 12px;'>Best Regards,<br><strong>Support Team</strong></p>
             </div>";
 
         $replyMail->send();
