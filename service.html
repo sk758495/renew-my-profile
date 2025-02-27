@@ -235,36 +235,38 @@
             <div class="col-md-5" data-aos="fade-up">
                 <div class="contact-info" data-aos="fade-up">
                     <h5><i class="bi bi-geo-alt" data-aos="fade-up"></i> Address</h5>
-                    <p data-aos="fade-up">76 Gayatri Nagar Makarpura</p>
+                    <p data-aos="fade-up">76, Gayatri Nagar, Parvati Nagar, Makarpura, Vadodara, Gujarat 390010</p>
                     <h5 data-aos="fade-up"><i class="bi bi-telephone"></i> Call Us</h5>
-                    <p data-aos="fade-up">+1 9898353941</p>
+                    <p data-aos="fade-up">+91 9898353941</p>
                     <h5 data-aos="fade-up"><i class="bi bi-envelope"></i> Email Us</h5>
                     <p data-aos="fade-up">sk758495@gmail.com</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24165.197383990827!2d-74.006015!3d40.712776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a21583f24fd%3A0x4213f69b8e0c17bf!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1645005270315!5m2!1sen!2sus" 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.899234917273!2d73.20078807516457!3d22.243901679727145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc50049215675%3A0x3ffb411563552f4!2sWeb%204%20Design%20Web%20Solution!5e0!3m2!1sen!2sin!4v1739805142543!5m2!1sen!2sin" 
                         width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" data-aos="fade-up"></iframe>
                 </div>
             </div>
             <div class="col-md-7" data-aos="fade-up">
-                <div class="contact-form" data-aos="fade-up">
-                    <div class="row" data-aos="fade-up">
-                        <div class="col-md-6 mb-3" data-aos="fade-up">
-                            <input type="text" class="form-control" placeholder="Your Name">
+                <form action="contact.php" method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
-                        <div class="col-md-6 mb-3" data-aos="fade-up">
-                            <input type="email" class="form-control" placeholder="Your Email">
+                        <div class="col-md-6 mb-3">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                         </div>
                     </div>
-                    <div class="mb-3" data-aos="fade-up">
-                        <input type="text" class="form-control" placeholder="Subject">
+                    <div class="mb-3">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
                     </div>
-                    <div class="mb-3" data-aos="fade-up">
-                        <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                    <div class="mb-3">
+                        <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
                     </div>
-                    <button class="btn btn-custom w-100">Send Message</button>
-                </div>
+                    <button type="submit" class="btn btn-custom w-100">Send Message</button>
+                </form>
+                
+            </div>
+                </form>                
             </div>
         </div>
-    </div>
         
     
     <footer class="footer">

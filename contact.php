@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <hr style='border: 1px solid #ddd;'>
                     <p>If you need urgent assistance, you can contact us directly at <a href='mailto:$admin_email'>$admin_email</a>.</p>
-                    <p style='text-align: center; color: #666; font-size: 12px;'>Best Regards,<br><strong>Your Support Team</strong></p>
+                    <p style='text-align: center; color: #666; font-size: 12px;'>Best Regards,<br><strong>Support Team</strong></p>
                 </div>
             </div>";
 
