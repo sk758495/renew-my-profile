@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Your details
     $admin_email = "sk758495@gmail.com";
     $admin_name  = "Your Name"; // Change to your name
-    $logo_url = "https://yourwebsite.com/logo.png"; // Replace with your logo URL
+    $logo_url = "https://techno.web4design.in/img/logo/Techno.png"; // Replace with your logo URL
 
     // SMTP Configuration
     $smtp_host = "smtp.gmail.com";
