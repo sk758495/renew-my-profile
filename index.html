@@ -15,7 +15,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
 </head>
-  <body>    
+  <body>  
+    <!-- cursor animation   -->
+    <div class="custom-cursor"></div>
+
+    <style>
+        .custom-cursor {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(13, 150, 234);
+            border-radius: 50%;
+            pointer-events: none; /* Ensures it doesn't interfere with clicks */
+            transition: transform 0.1s linear; /* Smooth movement */
+            z-index: 9999; /* Make sure it stays above everything */
+        }
+    </style>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cursor = document.querySelector(".custom-cursor");
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+            let delay = 0.1; // Lower value = faster movement
+            const cursorSize = 15; // Same as width & height in CSS
+            const offsetY = 50; // Adjust this value to move the dot above the cursor
+    
+            // Event listener to track mouse movement
+            document.addEventListener("mousemove", (e) => {
+                mouseX = e.clientX - cursorSize / 2; // Center horizontally
+                mouseY = e.clientY - cursorSize / 2 - offsetY; // Move the dot above the cursor
+            });
+    
+            // Function to animate the cursor smoothly
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * delay;
+                cursorY += (mouseY - cursorY) * delay;
+    
+                // Apply the calculated position to the cursor
+                cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+    
+                // Call the function again for continuous animation
+                requestAnimationFrame(animateCursor);
+            }
+    
+            // Start the animation
+            animateCursor();
+        });
+    </script>
+    <!-- cursor animation End Here  -->
 
         <div class="section-navbar">
         <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">

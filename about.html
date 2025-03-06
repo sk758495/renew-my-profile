@@ -1,165 +1,309 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Web-4-Design</title>
-        <meta name="theme-color" content="#007bff">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="about.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <link rel="icon" type="image/png" href="img/logo/fevicon.png">
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
-    </head>
-      <body>    
-    
-        <div class="section-navbar">
-          <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
-              <div class="container-fluid">
-                  <a class="navbar-brand" href="#">
-                      <img src="img/logo/Techno.png" alt="Bootstrap" width="150" height="50">
-                  </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                          <li class="nav-item">
-                              <a class="nav-link" href="index.html"><span>Home</span></a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="about.html"><span>About</span></a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="service.html"><span>Services</span></a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="contact.html"><span>Contact Us</span></a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="resume.html"><span>Download Resume</span></a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </nav>
-      </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web-4-Design</title>
+    <meta name="theme-color" content="#007bff">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="icon" type="image/png" href="img/logo/fevicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
+</head>
+  <body>  
+    <!-- cursor animation   -->
+    <div class="custom-cursor"></div>
 
-      <!-- Hero Section -->
-      <section class="hero-section" data-aos="fade-up">
-        <div class="hero-image">
-            <img src="img/banner-5.jpg" alt="Hero Background">
+    <style>
+        .custom-cursor {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(13, 150, 234);
+            border-radius: 50%;
+            pointer-events: none; /* Ensures it doesn't interfere with clicks */
+            transition: transform 0.1s linear; /* Smooth movement */
+            z-index: 9999; /* Make sure it stays above everything */
+        }
+    </style>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cursor = document.querySelector(".custom-cursor");
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+            let delay = 0.1; // Lower value = faster movement
+            const cursorSize = 15; // Same as width & height in CSS
+            const offsetY = 50; // Adjust this value to move the dot above the cursor
+    
+            // Event listener to track mouse movement
+            document.addEventListener("mousemove", (e) => {
+                mouseX = e.clientX - cursorSize / 2; // Center horizontally
+                mouseY = e.clientY - cursorSize / 2 - offsetY; // Move the dot above the cursor
+            });
+    
+            // Function to animate the cursor smoothly
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * delay;
+                cursorY += (mouseY - cursorY) * delay;
+    
+                // Apply the calculated position to the cursor
+                cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+    
+                // Call the function again for continuous animation
+                requestAnimationFrame(animateCursor);
+            }
+    
+            // Start the animation
+            animateCursor();
+        });
+    </script>
+    <!-- cursor animation End Here  -->
+
+        <div class="section-navbar">
+        <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo/Techno.png" alt="Bootstrap" width="150" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><span>Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html"><span>About</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html"><span>Services</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html"><span>Contact Us</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resume.html"><span>Download Resume</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+  <!-- Hero Section with Image -->
+  <section class="hero">
+    <img src="img/about-image.jpg" alt="Hero Image" class="img-fluid">
+</section>
+
+<!-- about us -->
+<div class="container hero-section">
+    <div class="row align-items-center">
+        <!-- Left Side - Image Section -->
+        <div class="col-lg-6 position-relative">
+            <div class="main-image">
+                <img src="img/service-banner.jpg" alt="Main Image">
+                <span class="experience-badge">25 Years Of Experience</span>
+            </div>
         </div>
-    </section>
-        <!-- About -->
-        <div class="container-fluid">
-            <section class="business-section" data-aos="fade-up">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <!-- Image Section -->
-                        <div class="col-md-6">
-                            <div class="image-container">
-                                <img src="img/about-image.jpg" alt="Web Solutions">
-                            </div>
-                        </div>
-                        <!-- Content Section -->
-                        <div class="col-md-6">
-                            <h2 class="business-title">Professional Web Solutions for Your Business</h2>
-                            <p class="business-description">
-                                We provide cutting-edge web solutions to help businesses establish a strong online presence. From website development to domain registration and hosting, we ensure fast, secure, and scalable digital experiences.
-                            </p>
-                            <ul class="business-list">
-                                <li><i class="bi bi-check-circle"></i> Custom Web Development tailored to your business needs.</li>
-                                <li><i class="bi bi-check-circle"></i> Secure & Affordable Domain Purchase for your brand identity.</li>
-                                <li><i class="bi bi-check-circle"></i> Reliable Web Hosting with 99.9% uptime guarantee.</li>
-                            </ul>
-                            <a href="#contact" class="btn btn-dark">Get Started</a>
-                        </div>
-                    </div>
+
+        <!-- Right Side - Text Content -->
+        <div class="col-lg-6">
+            <h5 class="text-primary">About Us</h5>
+            <h1 class="fw-bold">Empower Your Business With Our Comprehensive IT Solutions</h1>
+            <p>Welcome to TechXen, your premier destination for cutting-edge technology solutions and IT services. At TechXen, we are passionate about harnessing the power of technology to empower businesses alike.</p>
+
+            <!-- Progress Bars -->
+            <div class="mb-3">
+                <strong>IT Consulting</strong>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%"></div>
                 </div>
-            </section>
+            </div>
+
+            <div class="mb-4">
+                <strong>Cyber Security</strong>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-primary btn-lg">Get A Quote →</a>
         </div>
-            
-    <div class="container-fluid">
-        <div class="wrapper">
-            <p class="header-text">What We Do?</p>
-            <h2>The service we offer is specifically designed to meet your needs.</h2>
-            <div class="feature-grid">
-                <div class="feature-box">
-                    <i class="fa fa-headset feature-icon"></i>
-                    <div>
-                        <h3>24/7 Support</h3>
-                        <p>Providing assistance at any time of the day.</p>
-                    </div>
+    </div>
+</div>
+
+<!-- mission section -->
+<div class="container mission-section">
+    <div class="row align-items-center">
+        <!-- Left Side - Text Content -->
+        <div class="col-lg-6">
+            <h5 class="text-primary">Our Mission</h5>
+            <h1 class="fw-bold">Innovating for Success: Our Technology Mission</h1>
+            <p>At TechXen, our mission is simple: to revolutionize the digital landscape by delivering top-notch technology solutions that drive growth, efficiency, and sustainability for our clients. We strive to be the trusted partner that businesses can rely on to navigate the complexities of the digital world.</p>
+            <p>At TechXen, our mission is to empower businesses through technology. We believe in harnessing the power of innovation to drive growth, efficiency, and sustainability for our clients. Through our tailored technology solutions and unwavering commitment to excellence, we strive to be the catalyst for positive change in the digital landscape.</p>
+
+            <a href="#" class="btn btn-primary btn-lg">Get A Quote →</a>
+        </div>
+
+        <!-- Right Side - Single Image -->
+        <div class="col-lg-6 mission-image">
+            <img src="img/bg-x.png" alt="Mission Image">
+        </div>
+    </div>
+</div>
+
+<!-- vision-section -->
+<div class="container vision-section">
+    <div class="row align-items-center">
+        <!-- Left Side - Image Grid -->
+        <div class="col-lg-6">
+            <div class="row g-3 image-grid">
+                <div class="col-12">
+                    <img src="img/about-image.jpg" alt="Image 1" class="large-img">
                 </div>
-                <div class="feature-box">
-                    <i class="fa fa-shield-alt feature-icon"></i>
-                    <div>
-                        <h3>Secure Payments</h3>
-                        <p>Ensuring safe and secure transactions.</p>
-                    </div>
+                <div class="col-6">
+                    <img src="img/about-image.jpg" alt="Image 2" class="small-img">
                 </div>
-                <div class="feature-box">
-                    <i class="fa fa-cloud-upload-alt feature-icon"></i>
-                    <div>
-                        <h3>Daily Updates</h3>
-                        <p>Keeping you informed with the latest news.</p>
-                    </div>
-                </div>
-                <div class="feature-box">
-                    <i class="fa fa-chart-bar feature-icon"></i>
-                    <div>
-                        <h3>Market Research</h3>
-                        <p>Gathering data to help make informed decisions.</p>
-                    </div>
-                </div>
-                <div class="feature-box">
-                    <i class="fa fa-comments feature-icon"></i>
-                    <div>
-                        <h3>Social Engagement</h3>
-                        <p>Enhancing your brand’s social presence.</p>
-                    </div>
-                </div>
-                <div class="feature-box">
-                    <i class="fa fa-bullhorn feature-icon"></i>
-                    <div>
-                        <h3>Content Marketing</h3>
-                        <p>Creating quality content for your audience.</p>
-                    </div>
+                <div class="col-6">
+                    <img src="img/about-image.jpg" alt="Image 3" class="small-img">
                 </div>
             </div>
         </div>
-  </div>
-  
-  
-  <script>
-  const book = document.querySelector('.book');
 
-  // Toggle open/close on Click
-  book.addEventListener('click', () => {
-      book.classList.toggle('open');
-  });
+        <!-- Right Side - Text Content -->
+        <div class="col-lg-6">
+            <h5 class="text-primary">Our Vision</h5>
+            <h1 class="fw-bold">Driving Innovation: Our Vision at TechXen</h1>
+            <p>At TechXen, our vision is to be the leading force driving digital transformation and innovation worldwide. We envision a future where businesses of all sizes have the tools and expertise they need to thrive in an increasingly digital world.</p>
 
-  // Toggle open on Hover
-  book.addEventListener('mouseenter', () => {
-      book.classList.add('open');
-  });
+            <div class="d-flex align-items-start mb-3">
+                <div class="me-3">
+                    <span class="badge bg-light text-dark p-3">
+                        <img src="icon1.png" alt="Icon 1" width="30">
+                    </span>
+                </div>
+                <div>
+                    <h5 class="fw-bold">Network Infrastructure Solutions</h5>
+                    <p class="mb-0">Build a reliable and secure network infrastructure that supports your business operations seamlessly.</p>
+                </div>
+            </div>
 
-  // Close when Hover Out
-  book.addEventListener('mouseleave', () => {
-      book.classList.remove('open');
-  });
-  </script>
+            <div class="d-flex align-items-start mb-4">
+                <div class="me-3">
+                    <span class="badge bg-light text-dark p-3">
+                        <img src="icon2.png" alt="Icon 2" width="30">
+                    </span>
+                </div>
+                <div>
+                    <h5 class="fw-bold">Managed IT Services</h5>
+                    <p class="mb-0">Focus on your core business activities while we take care of your IT needs with our managed IT services.</p>
+                </div>
+            </div>
 
-     <!-- Footer --> 
-     <footer class="footer">
+            <a href="#" class="btn btn-primary btn-lg">Get A Quote →</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container story-section">
+    <h5 class="text-primary">Our Story</h5>
+    <h1 class="fw-bold">Our Company Story</h1>
+
+    <!-- Year Buttons -->
+    <div class="year-buttons my-4">
+        <button class="active" onclick="showStory(2017, event)">2017</button>
+        <button onclick="showStory(2018, event)">2018</button>
+        <button onclick="showStory(2019, event)">2019</button>
+        <button onclick="showStory(2020, event)">2020</button>
+        <button onclick="showStory(2021, event)">2021</button>
+        <button onclick="showStory(2022, event)">2022</button>
+        <button onclick="showStory(2023, event)">2023</button>
+        
+
+    </div>
+
+    <!-- Story Content -->
+    <div class="story-content">
+        <div class="story-text">
+            <h3 id="story-title">2017 - The Beginning</h3>
+            <p id="story-paragraph"><strong>Early Years:</strong> Our company was founded with the goal of bringing digital transformation to businesses. We started small but had big dreams of making technology accessible.</p>
+            <p><strong>Growth & Development:</strong> Our first major client helped us scale, allowing us to expand into new markets.</p>
+        </div>
+        
+        <div class="story-image">
+            <img id="story-image" src="img/i5@2x.png" alt="2017 Story">
+        </div>
+    </div>
+</div>
+
+<script>
+    const stories = {
+        2017: {
+            title: "2017 - The Beginning",
+            text: "<strong>Early Years:</strong> Our company was founded with the goal of bringing digital transformation to businesses. We started small but had big dreams of making technology accessible.<br><br><strong>Growth & Development:</strong> Our first major client helped us scale, allowing us to expand into new markets.",
+            image: "img/i5@2x.png"
+        },
+        2018: {
+            title: "2018 - Scaling Up",
+            text: "<strong>New Partnerships:</strong> We formed strategic alliances with major tech firms, boosting our credibility.<br><br><strong>Product Development:</strong> Launched our flagship software solution, which gained rapid adoption.",
+            image: "img/i5@2x.png"
+        },
+        2019: {
+            title: "2019 - Expanding Horizons",
+            text: "<strong>International Expansion:</strong> Opened offices in two new countries, increasing our global presence.<br><br><strong>Innovation:</strong> Invested heavily in R&D to stay ahead in the tech industry.",
+            image: "img/i5@2x.png"
+        },
+        2020: {
+            title: "2020 - A Legacy of Innovation",
+            text: "<strong>Early Years:</strong> Steve Jobs recognized the importance of technology in business, setting out to create a company that helps organizations leverage digital innovation.<br><br><strong>Expansion & Innovation:</strong> We expanded our services to cybersecurity, cloud computing, data analytics, and AI.",
+            image: "img/i5@2x.png"
+        },
+        2021: {
+            title: "2021 - Resilience & Growth",
+            text: "<strong>Pandemic Adaptation:</strong> Shifted to remote work solutions, enabling businesses to operate efficiently.<br><br><strong>Customer Focus:</strong> Developed customer-centric services to meet growing demands.",
+            image: "img/i5@2x.png"
+        },
+        2022: {
+            title: "2022 - Leading the Market",
+            text: "<strong>Industry Leadership:</strong> Recognized as a top innovator in the digital transformation space.<br><br><strong>New Products:</strong> Introduced AI-powered automation tools.",
+            image: "img/i5@2x.png"
+        },
+        2023: {
+            title: "2023 - The Future Ahead",
+            text: "<strong>AI Integration:</strong> Launched AI-driven business solutions.<br><br><strong>Expansion:</strong> Entered new sectors, including fintech and healthcare tech.",
+            image: "img/i5@2x.png"
+        }
+    };
+
+    function showStory(year, event) {
+    // Update the story content based on the selected year
+    document.getElementById("story-title").innerHTML = stories[year].title;
+    document.querySelector(".story-text p").innerHTML = stories[year].text; // Only update the <p> inside .story-text
+    document.getElementById("story-image").src = stories[year].image;
+
+    // Remove the 'active' class from all buttons
+    document.querySelectorAll(".year-buttons button").forEach(btn => btn.classList.remove("active"));
+
+    // Add the 'active' class to the clicked button
+    if (event && event.target) {
+        event.target.classList.add("active");
+    }
+}
+
+
+
+</script>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
                 <h3>Quick Link</h3>
@@ -246,8 +390,8 @@ $(document).ready(function() {
         });
       </script>
       
+      
     <script src="main.js"></script>
-    <script src="about.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
