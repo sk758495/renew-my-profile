@@ -1,374 +1,305 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Web-4-Design</title>
-        <meta name="theme-color" content="#007bff">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="portfolio.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <link rel="icon" type="image/png" href="img/logo/fevicon.png">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web-4-Design</title>
+    <meta name="theme-color" content="#007bff" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="service.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="icon" type="image/png" href="img/logo/fevicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <!-- Bootstrap Icons -->
+  </head>
+  <body>
     
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
-    </head>
-      <body>    
-    
-        <div class="section-navbar">
-          <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
-              <div class="container-fluid">
-                  <a class="navbar-brand" href="#">
-                      <img src="img/logo/Techno.png" alt="Bootstrap" width="150" height="50">
-                  </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                          <li class="nav-item">
-                              <a class="nav-link" href="index.html"><span>Home</span></a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="about.html"><span>About</span></a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="service.html"><span>Services</span></a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="contact.html"><span>Contact Us</span></a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="resume.html"><span>Download Resume</span></a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </nav>
-      </div>
-
-      <!-- Hero Section -->
-      <div class="container-fluid">
-      <section class="hero-section" data-aos="fade-up">
-        <div class="hero-image">
-            <img src="img/programming.jpg" alt="Hero Background">
+    <div class="section-navbar">
+      <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="img/logo/Techno.png"
+              alt="Bootstrap"
+              width="150"
+              height="50"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"><span>Home</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"><span>About</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="service.html"
+                  ><span>Services</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html"
+                  ><span>Contact Us</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resume.html"
+                  ><span>Download Resume</span></a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </nav>
     </div>
 
-    <div class="container-fluid">
-    <section class="business-section" data-aos="fade-up">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Image Section -->
-                <div class="col-md-6">
-                    <div class="image-container">
-                        <img src="img/about-image.jpg" alt="Web Solutions">
+    <!-- Hero Section with Image -->
+    <section class="hero">
+      <img src="img/programming.jpg" alt="Hero Image" class="img-fluid" />
+    </section>
+ <!-- creative service -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h6 class="text-primary fw-bold">CREATIVE SERVICES</h6>
+            <h2 class="fw-bold">Your Partner In <span class="text-primary">Digital</span> Success</h2>
+            <div class="row g-4 mt-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="p-4 shadow rounded bg-white text-center">
+                        <i class="bi bi-cpu fs-2 text-primary"></i>
+                        <h5 class="mt-3">Mobile App Development</h5>
+                        <p class="text-muted">Lorem is Ipsum is simply is design iomy is text Lorem Ipsum is simply is our busi Lorem is Ipsum is</p>
+                        <a href="#" class="btn btn-outline-primary custom-hover">Touch More +</a>
                     </div>
                 </div>
-                <!-- Content Section -->
-                <div class="col-md-6">
-                    <h2 class="business-title">Professional Web Solutions for Your Business</h2>
-                    <p class="business-description">
-                        We provide cutting-edge web solutions to help businesses establish a strong online presence. From website development to domain registration and hosting, we ensure fast, secure, and scalable digital experiences.
-                    </p>
-                    <ul class="business-list">
-                        <li><i class="bi bi-check-circle"></i> Custom Web Development tailored to your business needs.</li>
-                        <li><i class="bi bi-check-circle"></i> Secure & Affordable Domain Purchase for your brand identity.</li>
-                        <li><i class="bi bi-check-circle"></i> Reliable Web Hosting with 99.9% uptime guarantee.</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-dark">Get Started</a>
+                <div class="col-md-6 col-lg-4">
+                    <div class="p-4 shadow rounded bg-white text-center">
+                        <i class="bi bi-file-earmark-text fs-2 text-primary"></i>
+                        <h5 class="mt-3">Content Marketing</h5>
+                        <p class="text-muted">Lorem is Ipsum is simply is design iomy is text Lorem Ipsum is simply is our busi Lorem is Ipsum is</p>
+                        <a href="#" class="btn btn-outline-primary custom-hover">Touch More +</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="p-4 shadow rounded bg-white text-center">
+                        <i class="bi bi-cart fs-2 text-primary"></i>
+                        <h5 class="mt-3">E-commerce Solutions</h5>
+                        <p class="text-muted">Lorem is Ipsum is simply is design iomy is text Lorem Ipsum is simply is our busi Lorem is Ipsum is</p>
+                        <a href="#" class="btn btn-outline-primary custom-hover">Touch More +</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="p-4 shadow rounded bg-white text-center">
+                        <i class="bi bi-file-earmark-text fs-2 text-primary"></i>
+                        <h5 class="mt-3">Content Marketing</h5>
+                        <p class="text-muted">Lorem is Ipsum is simply is design iomy is text Lorem Ipsum is simply is our busi Lorem is Ipsum is</p>
+                        <a href="#" class="btn btn-outline-primary custom-hover">Touch More +</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="p-4 shadow rounded bg-white text-center">
+                        <i class="bi bi-cpu fs-2 text-primary"></i>
+                        <h5 class="mt-3">Mobile App Development</h5>
+                        <p class="text-muted">Lorem is Ipsum is simply is design iomy is text Lorem Ipsum is simply is our busi Lorem is Ipsum is</p>
+                        <a href="#" class="btn btn-outline-primary custom-hover">Touch More +</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="p-4 shadow rounded bg-white text-center">
+                        <i class="bi bi-cart fs-2 text-primary"></i>
+                        <h5 class="mt-3">E-commerce Solutions</h5>
+                        <p class="text-muted">Lorem is Ipsum is simply is design iomy is text Lorem Ipsum is simply is our busi Lorem is Ipsum is</p>
+                        <a href="#" class="btn btn-outline-primary custom-hover">Touch More +</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-     </div>
+ <!-- creative service end -->
 
-     <div class="container-fluid">
-    <div class="container skills-section" data-aos="fade-up">    
-      <div class="row">
-        <div class="col-md-6 mt-4" data-aos="fade-up">
-          <h2 class="fw-bold" data-aos="fade-up">Skills & Experience</h2>
-          <p>Set no et lorem dolor et diam, amet duo ut dolore vero eos.</p>
-          <h4 class="mt-4" data-aos="fade-up">My Skills</h4>
-          <div class="row" data-aos="fade-up">
-            <div class="col-md-6" data-aos="fade-up">
-              <p>HTML5 <span class="float-end">95%</span></p>
-              <div class="progress mb-3"data-aos="fade-up">
-                  <div class="progress-bar bg-primary" style="width: 95%"></div>
-              </div>
-              <p>CSS3 <span class="float-end">85%</span></p>
-              <div class="progress mb-3"data-aos="fade-up">
-                  <div class="progress-bar bg-warning" style="width: 85%"></div>
-              </div>
-              <p>PHP <span class="float-end">90%</span></p>
-              <div class="progress mb-3"data-aos="fade-up">
-                  <div class="progress-bar bg-danger" style="width: 90%"></div>
-              </div>
-              <p>WEBSITE HOSTING <span class="float-end">100%</span></p>
-              <div class="progress mb-3"data-aos="fade-up">
-                  <div class="progress-bar bg-warning" style="width: 100%"></div>
-              </div>
-          </div>
-      
-          <div class="col-md-6" data-aos="fade-up">
-              <p>JAVASCRIPT <span class="float-end">90%</span></p>
-              <div class="progress mb-3" data-aos="fade-up">
-                  <div class="progress-bar bg-danger" style="width: 90%"></div>
-              </div>
-              <p>LARAVEL <span class="float-end">95%</span></p>
-              <div class="progress mb-3" data-aos="fade-up">
-                  <div class="progress-bar bg-dark" style="width: 95%"></div>
-              </div>
-              <p>MYSQL <span class="float-end">85%</span></p>
-              <div class="progress mb-3" data-aos="fade-up">
-                  <div class="progress-bar bg-info" style="width: 85%"></div>
-              </div>
-          </div>
-          </div>
+ <!-- personal info -->
+ <section class="py-5 bg-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 text-center">
+                <img src="img/personal-infothumb-2653662e.png" alt="Person Illustration" class="img-fluid" />
+            </div>
+            <div class="col-lg-7">
+                <h2 class="fw-bold text-dark">Personal Info</h2>
+                <p class="text-muted">Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur, aliquam quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse quam nihil</p>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="p-3 shadow-sm rounded bg-light equal-box">
+                            <h6 class="text-dark mb-1">Email</h6>
+                            <p class="text-primary mb-1">sk758495@Gmail.Com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 shadow-sm rounded bg-light equal-box">
+                            <h6 class="text-dark mb-1">Phone</h6>
+                            <p class="text-primary mb-1">+(91) 98983 53941</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 shadow-sm rounded bg-light equal-box">
+                            <h6 class="text-dark mb-1">Address</h6>
+                            <p class="text-primary mb-1">Victoria Street, London</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 shadow-sm rounded bg-light d-flex align-items-center equal-box">
+                            <h6 class="text-dark mb-1 me-3">Follow</h6>
+                            <div>
+                                <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="bi bi-globe"></i></a>
+                                <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      
-      <!-- Tabs for Experience and Education -->
-      <div class="col-md-6 mt-4" data-aos="fade-up">
-          <ul class="nav nav-tabs" id="experienceTabs" role="tablist">
-              <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience" type="button" role="tab">Experience</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab">Education</button>
-              </li>
+    </div>
+</section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Quick Link</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
-          <div class="tab-content mt-3" data-aos="fade-up">
-                <div class="tab-pane fade show active" id="experience" role="tabpanel">
-                  <div class="row">
-                      <div class="col-md-6 mb-6" data-aos="fade-up">
-                          <h5>UI Designer</h5>
-                          <p><small>2022 - 2025</small><br>SELF BUSINESS</p>
-                      </div>
-                      <div class="col-md-6 mb-6" data-aos="fade-up">
-                          <h5>Web Designer</h5>
-                          <p><small>2022 - 2025</small><br>JASHMA INFO SOFT</p>
-                      </div>
-                      <div class="col-md-6 mb-6" data-aos="fade-up">
-                          <h5>Web Hosting</h5>
-                          <p><small>2024 - 2025</small><br>JASHMA INFO SOFT</p>
-                      </div>
-                      <div class="col-md-6 mb-6" data-aos="fade-up">
-                        <h5>Web Hosting</h5>
-                        <p><small>2024 - 2045</small><br>JASHMA INFO SOFT</p>
-                    </div>
-                  </div>
-              </div>
-          
-              <div class="tab-pane fade" id="education" role="tabpanel">
-                <div class="row" data-aos="fade-up">
-                    <div class="col-md-6 mb-6" data-aos="fade-up">
-                        <h5>BE in Computer Science</h5>
-                        <p><small>2024 - 2025</small><br>GUJARAT TECHNOLOGICAL UNIVERSITY</p>
-                    </div>
-                    <div class="col-md-6 mb-6" data-aos="fade-up">
-                        <h5>GRADE</h5>
-                        <p><small>10/10 SPI</small><br>7.06/10 CGPA</p>
-                    </div>
-                </div>
-            </div>
-            
+        </div>
+
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="service.html">Custom Web Design</a></li>
+            <li><a href="service.html">Ecommerce Website</a></li>
+            <li><a href="service.html">Web Hosting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <p class="contact-info-footer">
+            76, Gayatri Nagar, Parvati Nagar, Makarpura, Vadodara, Gujarat
+            390010 <br />
+            <a href="tel:+91 9898353941">+91 98983 53941</a>
+          </p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/share/1612Gct6Mw/">f</a>
+            <a
+              href="https://www.instagram.com/sk75859?igsh=MXJzZ3RuZnF2emJobA=="
+              >in</a
+            >
+            <a
+              href="https://www.linkedin.com/in/sunny-kumar-varma-05b998203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              >ln</a
+            >
           </div>
-      </div>
-      
-    </div>
-
-  </div>
-</div>
-
-<div class="container-fluid">
-    <div class="container services-section" data-aos="fade-up">
-        <div class="d-flex justify-content-between align-items-center">
-            <h2 class="fw-bold" data-aos="fade-up">My Services</h2>
-            <button class="btn-hire" data-aos="fade-up">Hire Me</button>
         </div>
-        <div class="row mt-4" data-aos="fade-up">
-            <div class="col-md-6 mb-4" data-aos="fade-up">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon" data-aos="fade-up">🎨</div>
-                    <div data-aos="fade-up">
-                        <h5>Web Hosting</h5> 
-                        <p><strong>Starting at ₹199</strong></p>
-                        <p>Reliable and secure web hosting solutions tailored to your needs.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4" data-aos="fade-up">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon" data-aos="fade-up">🖌️</div>
-                    <div data-aos="fade-up">
-                        <h5>Graphic Design</h5>
-                        <p><strong>Starting at ₹199</strong></p>
-                        <p>Creative and visually appealing designs to enhance your brand identity.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4" data-aos="fade-up">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon" data-aos="fade-up">💻</div>
-                    <div>
-                        <h5>Web Design</h5>
-                        <p><strong>Starting at ₹199</strong></p>
-                        <p>Modern and user-friendly websites that make an impact.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4" data-aos="fade-up">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon" data-aos="fade-up">📱</div>
-                    <div>
-                        <h5>UI/UX Design</h5>
-                        <p><strong>Starting at ₹199</strong></p>
-                        <p>Seamless and intuitive user experiences for websites and mobile apps.</p>
-                    </div>
-                </div>
-            </div>
+
+        <div class="footer-column subscribe">
+          <h2>Let's Make Consultation With Us!</h2>
+          <form id="subscribe-form">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit">→</button>
+          </form>
+          <p id="subscribe-message"></p>
+          <!-- Success/Error Message -->
         </div>
-    </div>
-</div>
-    
-<div class="container-fluid">
-    <div class="container contact-section" data-aos="fade-up">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="fw-bold" data-aos="fade-up">Contact</h2>
-            <div class="underline"></div>
-            <p data-aos="fade-up">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div>
-        <div class="row" data-aos="fade-up">
-            <div class="col-md-5" data-aos="fade-up">
-                <div class="contact-info" data-aos="fade-up">
-                    <h5><i class="bi bi-geo-alt" data-aos="fade-up"></i> Address</h5>
-                    <p data-aos="fade-up">76, Gayatri Nagar, Parvati Nagar, Makarpura, Vadodara, Gujarat 390010</p>
-                    <h5 data-aos="fade-up"><i class="bi bi-telephone"></i> Call Us</h5>
-                    <p data-aos="fade-up">+91 9898353941</p>
-                    <h5 data-aos="fade-up"><i class="bi bi-envelope"></i> Email Us</h5>
-                    <p data-aos="fade-up">sk758495@gmail.com</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.899234917273!2d73.20078807516457!3d22.243901679727145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc50049215675%3A0x3ffb411563552f4!2sWeb%204%20Design%20Web%20Solution!5e0!3m2!1sen!2sin!4v1739805142543!5m2!1sen!2sin" 
-                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" data-aos="fade-up"></iframe>
-                </div>
-            </div>
-            <div class="col-md-7" data-aos="fade-up">
-                <form action="contact.php" method="POST">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-                    </div>
-                    <div class="mb-3">
-                        <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-custom w-100">Send Message</button>
-                </form>
-                
-            </div>
-                </form>                
-            </div>
-        </div>
-        </div>
-    
-     <!-- Footer -->
-     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Quick Link</h3>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
 
-            <div class="footer-column">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="service.html">Custom Web Design</a></li>
-                    <li><a href="service.html">Ecommerce Website</a></li>
-                    <li><a href="service.html">Web Hosting</a></li>
-                </ul>
-            </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+          $(document).ready(function () {
+            $("#subscribe-form").submit(function (e) {
+              e.preventDefault();
 
-            <div class="footer-column">
-                <h3>Contact</h3>
-                <p class="contact-info-footer">
-                    76, Gayatri Nagar, Parvati Nagar, Makarpura, Vadodara, Gujarat 390010 <br>
-                    <a href="tel:+91 9898353941">+91 98983 53941</a>
-                </p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/share/1612Gct6Mw/">f</a>
-                    <a href="https://www.instagram.com/sk75859?igsh=MXJzZ3RuZnF2emJobA==">in</a>
-                    <a href="https://www.linkedin.com/in/sunny-kumar-varma-05b998203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">ln</a>
-                </div>
-            </div>
+              var email = $("#email").val();
+              $("#subscribe-message")
+                .html("Submitting...")
+                .css("color", "blue");
 
-            <div class="footer-column subscribe">
-                <h2>Let's Make Consultation With Us!</h2>
-                <form id="subscribe-form">
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    <button type="submit">→</button>
-                </form>
-                <p id="subscribe-message"></p> <!-- Success/Error Message -->
-            </div>
-
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-    $("#subscribe-form").submit(function(e) {
-        e.preventDefault();
-        
-        var email = $("#email").val();
-        $("#subscribe-message").html("Submitting...").css("color", "blue");
-
-        $.ajax({
-            type: "POST",
-            url: "subscribe.php",
-            data: { email: email },
-            success: function(response) {
-                if (response === "success") {
-                    $("#subscribe-message").html("✅ Subscription successful! Check your email.").css("color", "green");
+              $.ajax({
+                type: "POST",
+                url: "subscribe.php",
+                data: { email: email },
+                success: function (response) {
+                  if (response === "success") {
+                    $("#subscribe-message")
+                      .html("✅ Subscription successful! Check your email.")
+                      .css("color", "green");
                     $("#email").val(""); // Clear input
-                } else {
-                    $("#subscribe-message").html("❌ " + response).css("color", "red");
-                }
-            }
-        });
-    });
-});
-</script>
+                  } else {
+                    $("#subscribe-message")
+                      .html("❌ " + response)
+                      .css("color", "red");
+                  }
+                },
+              });
+            });
+          });
+        </script>
+      </div>
 
-        </div>
-
-        <div class="footer-bottom">
-            Copyright © 2025 Techno.Web-4-Design. All rights reserved | Developed By <span>Sunny Kumar.</span>
-        </div>
+      <div class="footer-bottom">
+        Copyright © 2025 Techno.Web-4-Design. All rights reserved | Developed By
+        <span>Sunny Kumar.</span>
+      </div>
     </footer>
 
-
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          AOS.init({
-            duration: 1000,  // Animation duration in milliseconds
-            once: true,      // Animation occurs only once
-            easing: "ease-in-out", // Smooth animation
-          });
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 1000, // Animation duration in milliseconds
+          once: true, // Animation occurs only once
+          easing: "ease-in-out", // Smooth animation
         });
-      </script>
-      
+      });
+    </script>
+
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
