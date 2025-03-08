@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addReplyTo($email, $name);
 
         $mail->isHTML(true);
-        $mail->Subject = "📩 New Contact Form Submission - $subject";
+        $mail->Subject = "New Contact Form Submission - $subject";
         $mail->Body = "
             <div style='background: #f5f5f5; padding: 20px; font-family: Arial, sans-serif;'>
                 <div style='background: #ffffff; padding: 20px; border-radius: 8px;'>
@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $replyMail->setFrom($smtp_username, "Support Team");
         $replyMail->addAddress($email, $name);
         $replyMail->isHTML(true);
-        $replyMail->Subject = "📩 Thank you for contacting us!";
+        $replyMail->Subject = "Thank you for contacting us!";
         $replyMail->Body = "
             <div style='background: #f5f5f5; padding: 20px; font-family: Arial, sans-serif;'>
                 <div style='background: #ffffff; padding: 20px; border-radius: 8px;'>
