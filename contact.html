@@ -6,8 +6,7 @@
         <title>Web-4-Design</title>
         <meta name="theme-color" content="#007bff">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="portfolio.css">
+        <link rel="stylesheet" href="contact.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -53,59 +52,56 @@
 
   
     <!-- Hero Section -->
-    <div class="container-fluid">
-    <section class="hero-section" data-aos="fade-up">
-        <div class="hero-image">
-            <img src="img/banner-7.jpg" alt="Hero Background">
-        </div>
-    </section>
+     <div class="container-fluid">
+    <section class="hero">
+        <img src="img/banner-7.jpg" alt="Hero Image" class="img-fluid" />
+      </section>
     </div>
-
     
-<div class="container-fluid">
-    <div class="container contact-section" data-aos="fade-up">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="fw-bold" data-aos="fade-up">Contact</h2>
-            <div class="underline"></div>
-            <p data-aos="fade-up">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div>
-        <div class="row" data-aos="fade-up">
-            <div class="col-md-5" data-aos="fade-up">
-                <div class="contact-info" data-aos="fade-up">
-                    <h5><i class="bi bi-geo-alt" data-aos="fade-up"></i> Address</h5>
-                    <p data-aos="fade-up">76, Gayatri Nagar, Parvati Nagar, Makarpura, Vadodara, Gujarat 390010</p>
-                    <h5 data-aos="fade-up"><i class="bi bi-telephone"></i> Call Us</h5>
-                    <p data-aos="fade-up">+91 9898353941</p>
-                    <h5 data-aos="fade-up"><i class="bi bi-envelope"></i> Email Us</h5>
-                    <p data-aos="fade-up">sk758495@gmail.com</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.899234917273!2d73.20078807516457!3d22.243901679727145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc50049215675%3A0x3ffb411563552f4!2sWeb%204%20Design%20Web%20Solution!5e0!3m2!1sen!2sin!4v1739805142543!5m2!1sen!2sin" 
-                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" data-aos="fade-up"></iframe>
+    <div class="container-fluid">
+        <div class="container contact-section" data-aos="fade-up">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold" data-aos="fade-up">Contact</h2>
+                <div class="underline"></div>
+                <p data-aos="fade-up">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div>
+            <div class="row" data-aos="fade-up">
+                <div class="col-md-5" data-aos="fade-up">
+                    <div class="contact-info" data-aos="fade-up">
+                        <h5><i class="bi bi-geo-alt" data-aos="fade-up"></i> Address</h5>
+                        <p data-aos="fade-up">76, Gayatri Nagar, Parvati Nagar, Makarpura, Vadodara, Gujarat 390010</p>
+                        <h5 data-aos="fade-up"><i class="bi bi-telephone"></i> Call Us</h5>
+                        <p data-aos="fade-up">+91 9898353941</p>
+                        <h5 data-aos="fade-up"><i class="bi bi-envelope"></i> Email Us</h5>
+                        <p data-aos="fade-up">sk758495@gmail.com</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.899234917273!2d73.20078807516457!3d22.243901679727145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc50049215675%3A0x3ffb411563552f4!2sWeb%204%20Design%20Web%20Solution!5e0!3m2!1sen!2sin!4v1739805142543!5m2!1sen!2sin" 
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" data-aos="fade-up"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-7" data-aos="fade-up">
+                    <form action="contact.php" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom w-100">Send Message</button>
+                    </form>
+                    
+                </div>
+                    </form>                
                 </div>
             </div>
-            <div class="col-md-7" data-aos="fade-up">
-                <form action="contact.php" method="POST">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-                    </div>
-                    <div class="mb-3">
-                        <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-custom w-100">Send Message</button>
-                </form>
-                
-            </div>
-                </form>                
-            </div>
-        </div>
-        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
