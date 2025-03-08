@@ -190,6 +190,22 @@ body {
     display: block;
 }
  
+@media (max-width: 768px) {
+    .hero img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+@media (max-width: 576px) {
+    .hero img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+
 .hero-section {
     padding: 60px 0;
 }
