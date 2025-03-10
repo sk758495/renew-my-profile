@@ -15,13 +15,13 @@ $dompdf = new Dompdf($options);
 $html = file_get_contents('resume.html');
 
 // Convert image to base64
-$imagePath = 'img/my-image.jpeg'; // Path to your image
+$imagePath = 'https://techno.web4design.in/img/my-image.jpeg'; // Path to your image
 $type = pathinfo($imagePath, PATHINFO_EXTENSION);
 $data = file_get_contents($imagePath);
 $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
 
 // Replace the image source with base64
-$html = str_replace('img/my-image.jpeg', $base64, $html);
+$html = str_replace('https://techno.web4design.in/img/my-image.jpeg', $base64, $html);
 
 // Remove the download button for PDF output
 $html = preg_replace('/<div class="download-btn">.*?<\/div>/s', '', $html);
