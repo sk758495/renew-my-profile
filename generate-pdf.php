@@ -32,5 +32,5 @@ $dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
 
 // Download PDF
-$dompdf->stream("resume.pdf", ["Attachment" => true]);
+$dompdf->stream("sunny-kumar.pdf", ["Attachment" => true]);
 ?>
