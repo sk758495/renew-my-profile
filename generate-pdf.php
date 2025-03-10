@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php'; // Load domPDF via Composer
+require 'vendor/autoload.php';
 
 use Dompdf\Dompdf;
 use Dompdf\Options;
@@ -7,23 +7,30 @@ use Dompdf\Options;
 // Enable options
 $options = new Options();
 $options->set('defaultFont', 'Helvetica');
+$options->set('isHtml5ParserEnabled', true);
+$options->set('isRemoteEnabled', true); // Enable external URLs
 $dompdf = new Dompdf($options);
 
-// Load HTML from resume.html
+// Load HTML from file
 $html = file_get_contents('resume.html');
 
-// Remove the download button from the PDF output
+// Convert image to base64
+$imagePath = 'img/my-image.jpeg'; // Path to your image
+$type = pathinfo($imagePath, PATHINFO_EXTENSION);
+$data = file_get_contents($imagePath);
+$base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+
+// Replace the image source with base64
+$html = str_replace('img/my-image.jpeg', $base64, $html);
+
+// Remove the download button for PDF output
 $html = preg_replace('/<div class="download-btn">.*?<\/div>/s', '', $html);
 
-// Load HTML into domPDF
+// Load HTML into Dompdf
 $dompdf->loadHtml($html);
-
-// Set paper size and orientation
 $dompdf->setPaper('A4', 'portrait');
-
-// Render the HTML as PDF
 $dompdf->render();
 
-// Output the generated PDF (force download)
+// Download PDF
 $dompdf->stream("resume.pdf", ["Attachment" => true]);
 ?>
