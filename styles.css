@@ -551,6 +551,11 @@ body {
     animation-play-state: paused;
 }
 
+.project-item img {
+    padding: 4px;
+    border-radius: 10px;
+}
+
 
 .footer {
     background-color: #111;
